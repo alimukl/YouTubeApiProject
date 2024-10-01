@@ -1,0 +1,154 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #ff0000;
+    }
+
+/* Video container */
+.video-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 900px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s;
+}
+
+    .video-container:hover {
+        background-color: #282828;
+    }
+
+/* Thumbnail */
+.video-thumbnail {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    margin-right: 15px;
+}
+
+    .video-thumbnail img {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+/* Video details */
+.video-details {
+    flex-grow: 1;
+}
+
+    .video-details h3 {
+        font-size: 1.1em;
+        margin: 0;
+        color: white;
+    }
+
+    .video-details p {
+        font-size: 0.9em;
+        color: #aaa;
+        margin: 10px 0;
+        line-height: 1.4;
+        max-height: 44px; /* Limit description height to 2 lines */
+        overflow: hidden;
+    }
+
+/* Channel info */
+.channel-info {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.channel-profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.channel-name {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Ensure responsive */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 95%;
+    }
+
+    .video-thumbnail {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .video-details {
+        width: 100%;
+    }
+}
+
