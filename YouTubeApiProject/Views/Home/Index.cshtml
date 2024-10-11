@@ -1,8 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h1>Welcome to YouTube API!</h1><br />
+    <p>Discover a world of videos at your fingertips. Our application provides a simple interface for searching and viewing YouTube content.</p>
+
+    <hr />
+
+    <h3>Function Overview</h3>
+
+    <div class="card mb-4" style="background-color: #f8f9fa; border: 1px solid #ced4da;">
+        <div class="card-body">
+            <div class="mb-4">
+                <h4>Search Page</h4>
+                <p style="color:black"><strong>Function:</strong> Allows users to search for videos on YouTube using keywords.</p>
+                <p style="color:black"><strong>How to Use:</strong> Simply enter your desired search term in the input form and click the <strong>"Search"</strong> button.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4" style="background-color: #f8f9fa; border: 1px solid #ced4da;">
+        <div class="card-body">
+            <div class="mb-4">
+                <h4>Results Page</h4>
+                <p style="color:black"><strong>Function:</strong> Displays the search results retrieved from the YouTube API in a user-friendly format.</p>
+                <p style="color:black"><strong>How to Use:</strong> Browse through the list of videos that match your search query. Click on any video to watch it directly on YouTube.</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Get Started!</h3>
+    <p>Ready to dive into the world of videos? Click the button below to start your search!</p>
+    <a class="btn btn-danger" style="color: white; font-family: 'Roboto', sans-serif;" asp-controller="YouTube"
+       asp-action="Index">Go to Search Page</a>
+
+
+    <hr />
+
+    <h3>Need Help?</h3>
+    <p>If you have any questions or need assistance, feel free to reach out to us.</p>
 </div>
+
