@@ -706,7 +706,7 @@ body {
 
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px){
 
     .container1 {
         display: flex; /* Use flexbox for alignment */
@@ -717,7 +717,7 @@ body {
         padding: 160px; /* Increased padding for more height */
         background: linear-gradient(to bottom, #2f2845, #2c3f5e,#0f0f0f); /* More contrasting gradient */
         color: white; /* Text color */
-        width: 99vw; /* Set container to full viewport width */
+        width: 99.4vw; /* Set container to full viewport width */
         position: relative; /* Ensure proper placement in the layout */
         left: 50%; /* Adjust left position */
         right: 50%; /* Adjust right position */
@@ -725,4 +725,10 @@ body {
         margin-right: -50vw; /* Pull margin back to ensure full width */
     }
 
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+    }
 }
