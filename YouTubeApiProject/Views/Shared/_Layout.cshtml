@@ -10,14 +10,141 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/YouTubeApiProject.styles.css" asp-append-version="true" />
+
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-searchbar {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100px;
+  .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #FF0000;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+    // box-shadow: 0 0 25px 0 #FF0000;
+    &:hover {
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      margin: auto;
+      top: 18px;
+      right: 0;
+      bottom: 0;
+      left: 18px;
+      width: 13px;
+      height: 2px;
+      background: white;
+      transform: rotate(45deg);
+      transition: all 0.5s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      margin: auto;
+      top: -5px;
+      right: 0;
+      bottom: 0;
+      left: -5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid white;
+      transition: all 0.5s;
+    }
+  }
+  input {
+    font-family: "Inconsolata", monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: #FF0000;
+    color: white;
+    text-shadow: 0 0 10px #FF0000;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 #FF0000, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      width: 300px;
+      opacity: 1;
+      cursor: text;
+    }
+    &:focus ~ .search {
+      right: -250px;
+      background: #151515;
+      z-index: 6;
+      &::before {
+        top: 0;
+        left: 0;
+        width: 25px;
+      }
+      &::after {
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        border: none;
+        background: white;
+        border-radius: 0%;
+        transform: rotate(-45deg);
+      }
+    }
+    &::placeholder {
+      color: white;
+      opacity: 0.5;
+      font-weight: bolder;
+    }
+  }
+}
+
+</style>
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light background-color: #000000 box-shadow mb-20">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white; font-family: 'Roboto', sans-serif;">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white; font-family: 'Roboto', sans-serif; display: flex; align-items: center;">
                     <img src="~/favicon.ico" alt="Favicon" style="width: 50px; height: 50px; margin-right: 8px; vertical-align: middle;" />
-                 Premium
+                    <span class="premium-text">Youtube</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -26,24 +153,30 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white; font-family: 'Roboto', sans-serif;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" style="color: white; font-family: 'Roboto', sans-serif;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <!-- Search Music Menu -->
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white; font-family: 'Roboto', sans-serif;"  asp-controller="YouTube"
-                               asp-action="Index">Search Music</a>
+                            <a class="nav-link" style="color: white; font-family: 'Roboto', sans-serif;" asp-controller="YouTube" asp-action="Index">Search Music</a>
                         </li>
+                        <div class="container-searchbar">
+                            <form asp-controller="YouTube" asp-action="Search" method="post">
+                                <input type="text" name="query" placeholder="Search...">
+                            <div class="search"></div>
+                            </form>
+                        </div>
                     </ul>
-                    <div class="ml-auto" style="color: white; font-family: 'Roboto', sans-serif; margin-left: auto;">
-                        <span style="color: darkred;">Dev:</span>
-                        <span>Alim</span>
+                    <a class="nav-link" href="https://github.com/alimukl" target="_blank" title="Hello there">
+                        <img src="../css/gitprofile.png" alt="Profile Photo" class="rounded-circle" width="40" height="40">
+                    </a>
+                    <div class="ml-auto" style="color: white; font-family: 'Roboto', sans-serif; margin-left: auto;" title="<--">
+                        <a href="https://github.com/alimukl" style="color: white; text-decoration: none;">Alimukl</a>
                     </div>
-
-
                 </div>
             </div>
         </nav>
     </header>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

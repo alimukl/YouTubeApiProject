@@ -1,11 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<div class="container">
+<div id="loader-container">
+    <span class="loader"></span>
+</div>
 
+<div class="container">
     <div class="container1">
         <!-- Left Section with Description -->
         <div class="fade-in">
@@ -19,7 +21,7 @@
         <a href="https://www.youtube.com/paid_memberships?ybp=mAEO" class="btn">Manage</a>
         <p>Or save money with a <a href="https://www.youtube.com/paid_memberships?ybp=mAEO" class="blue-link">family membership</a>.</p></p>
         <p>
-           <span class="small-text"><a href="https://www.youtube.com/premium/restrictions" class="blue-link">Restrictions apply.</a></span>
+                <span class="small-text"><a href="https://www.youtube.com/premium/restrictions" class="blue-link">Restrictions apply.</a></span>
         </p>
         </div>
     </div>
@@ -204,6 +206,17 @@
   </div>
 
 </div>
+
+<!-- Loader js -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Set a timeout to hide the loader after 3 seconds
+        setTimeout(function () {
+            document.getElementById('loader-container').style.display = 'none'; // Hide the loader
+            document.getElementById('main-content').style.display = 'block'; // Show the main content
+        }, 1800);
+    });
+</script>
 
 <!-- Include jQuery and custom fade-in script at the bottom -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,5 +1,10 @@
 ﻿@model List<YouTubeApiProject.Models.YouTubeVideoModel>
 <link rel="stylesheet" href="~/css/site.css" />
+
+<div id="loader-container">
+    <span class="loader"></span>
+</div>
+
 <h2>Search YouTube Videos</h2>
 
 <form asp-action="Search" method="post">
@@ -25,12 +30,22 @@
                     </div>
                     <br />
                     <a href="@video.VideoUrl" target="_blank">
-                        <button type="button">Watch</button>
-                        <!--
-                        Watch button -->
+                        <button type="button" style="border-radius: 15px; padding: 5px 10px; font-size: 14px;">
+                            Watch
+                        </button>
                     </a>
                 </div>
             </div>
         }
     </div>
 }
+<!-- Loader js -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Set a timeout to hide the loader after 3 seconds
+        setTimeout(function () {
+            document.getElementById('loader-container').style.display = 'none'; // Hide the loader
+            document.getElementById('main-content').style.display = 'block'; // Show the main content
+        }, 1500);
+    });
+</script>
