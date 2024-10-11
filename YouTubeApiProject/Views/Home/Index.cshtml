@@ -2,7 +2,91 @@
     ViewData["Title"] = "Home";
 }
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <div class="container">
+
+    <div class="container1">
+        <!-- Left Section with Description -->
+        <div class="fade-in">
+            <img src="~/css/ytpremium.png" alt="YouTube Music Logo" class="logo">
+            <h1>All Youtube.</h1>
+            <h1>No interruptions.</h1>
+            <p>
+            YouTube and YouTube Music ad-free, offline, and in the background </br> </br>
+            You have YouTube Premium
+            </p>
+        <a href="https://www.youtube.com/paid_memberships?ybp=mAEO" class="btn">Manage</a>
+        <p>Or save money with a <a href="https://www.youtube.com/paid_memberships?ybp=mAEO" class="blue-link">family membership</a>.</p></p>
+        <p>
+           <span class="small-text"><a href="https://www.youtube.com/premium/restrictions" class="blue-link">Restrictions apply.</a></span>
+        </p>
+        </div>
+    </div>
+
+    <div class="container-box">
+        <div class="box">
+            <p>Ad-free so you can immerse yourself in your favourite videos without interruption</p>
+        </div>
+        <div class="box">
+            <p>Download videos to watch later when you’re offline or on the go</p>
+        </div>
+        <div class="box">
+            <p>Background play so you can watch while using other apps or with your screen locked</p>
+        </div>
+        <div class="box">
+            <p>Stream all the music you want to hear, ad-free on the YouTube Music app</p>
+        </div>
+    </div>
+
+    <div class="container-header">
+
+        <h1>Pick a membership </br> that fits you</h1>
+ 
+    </div>
+
+    <div class="card-container">
+        <div class="card-family">
+            <div class="card-content">
+                <div class="card-header">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/family.png" alt="Family Icon" class="icon">
+                    <h2>Family</h2>
+                </div>
+                <p class="plan-type">Monthly</p>
+                <p class="price">MYR 41.90/month</p>
+                <p class="description">Add up to 5 family members (aged 13+) in your household. Restrictions apply.</p>
+                <a href="https://www.youtube.com/premium/family" class="btn">Get Family Plan</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-header">
+
+        <h1>Keep playing what you love</br></h1>
+
+    </div>
+
+
+    <div class="container2">
+        <!-- Left Section with Description -->
+        <div class="left-section">
+            <img src="~/css/ytmusic.png" alt="YouTube Music Logo" class="logo">
+            <h1>An app made just for music</h1>
+            <p>
+                With YouTube Premium, you get uninterrupted access to stream all that you want on the YouTube Music app.
+                Listen to the world's largest music catalogue with over 100 million songs, ad-free – enjoy personalised mixes, playlists to fit every mood, chart-toppers from around the world and more, all without ads.
+            </p>
+        </div>
+
+        <!-- Right Section with YouTube Video -->
+        <div class="right-section">
+            <video width="400" height="300" autoplay loop muted playsinline>
+                <source src="@Url.Content("~/premium.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
     <h1>Welcome to YouTube API!</h1><br />
     <p>Discover a world of videos at your fingertips. Our application provides a simple interface for searching and viewing YouTube content.</p>
 
@@ -41,4 +125,25 @@
     <h3>Need Help?</h3>
     <p>If you have any questions or need assistance, feel free to reach out to us.</p>
 </div>
+
+<!-- Include jQuery and custom fade-in script at the bottom -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Add the show class to fade in content
+        $('.fade-in').addClass('show');
+
+        // Optional: You can add a scroll event to trigger it when it comes into view
+        $(window).on('scroll', function () {
+            $('.fade-in').each(function () {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+                    $(this).addClass('show');
+                }
+            });
+        });
+    });
+</script>
+
+
+
 

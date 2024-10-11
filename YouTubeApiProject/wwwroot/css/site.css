@@ -21,6 +21,7 @@ html {
   }
 }
 
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -32,6 +33,7 @@ html {
 
 body {
   margin-bottom: 60px;
+
 }
 
 
@@ -39,7 +41,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #181818;
+    background-color: #131313 !important;
     color: white;
 }
 
@@ -61,6 +63,10 @@ input[type="text"] {
     border-radius: 3px;
     margin-right: 10px;
     font-size: 16px;
+}
+
+.small-text {
+    font-size: 12px; /* Adjust the size as needed */
 }
 
 button {
@@ -164,4 +170,267 @@ button {
         width: 100%;
     }
 }
+/* card family plan */
+
+
+.card-container {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+    height: 40vh; /* Full viewport height */
+}
+
+.card-family {
+    background-color: #1c1c1c;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    max-width: 400px; /* Max width for the card */
+    width: 100%; /* Full width on smaller screens */
+    overflow: hidden; /* Prevent content overflow */
+    margin: 20px; /* Margin for spacing */
+}
+
+.card-content {
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center align text */
+}
+
+.card-header {
+    display: flex; /* Use flexbox for icon and title */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 15px; /* Space below the header */
+}
+
+.icon {
+    width: 30px; /* Set icon size */
+    height: 30px; /* Set icon size */
+    margin-right: 10px; /* Space between icon and title */
+}
+
+h2 {
+    font-size: 24px; /* Font size for title */
+    color: white; /* Black color */
+}
+
+.plan-type {
+    font-size: 18px; /* Font size for plan type */
+    color: ghostwhite; /* Dark gray color */
+}
+
+.price {
+    font-size: 22px; /* Font size for price */
+    color: white; /* Black color */
+    margin: 10px 0; /* Margin above and below */
+}
+
+.description {
+    font-size: 14px; /* Font size for description */
+    color: #777; /* Light gray color */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+.btn {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+    .btn:hover {
+        background-color: #444; /* Darker black on hover */
+    }
+
+.container-box {
+    display: flex;
+    flex-direction: row; /* Explicitly set to row */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+.box {
+    background-color: #28779e;
+    padding: 20px;
+    margin: 10px;
+    width: 200px; /* Adjust the width if needed */
+    text-align: center;
+    border-radius: 5px; /* Add this line for rounded edges */
+}
+
+    .box:hover {
+        background-color: cornflowerblue;
+    }
+
+    .box h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .box p {
+        font-size: 15px;
+        color: white;
+    }
+
+
+.btn {
+    display: inline-block; /* Make it inline-block for better alignment */
+    padding: 12px 40px; /* Padding for the button */
+    background-color: #2da8e6; /* Button background color */
+    color: black; /* Text color */
+    font-weight: bold; /* Make text bold */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Increase this value for more rounded corners */
+    font-size: 16px; /* Font size */
+    text-decoration: none; /* Remove underline */
+    margin: 20px 0; /* Space around the button */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+    .btn:hover {
+        background-color: #28779e; /* Darker red on hover */
+    }
+
+.blue-link {
+    color: #2da8e6;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+
+.container-header {
+    text-align: center; /* Center the text horizontally */
+    padding: 20px; /* Add some padding around the container */
+}
+
+    .container-header h1 {
+        font-size: 60px; /* Set the font size to make it big */
+        font-weight: bold; /* Make the font bold */
+        padding: 160px;
+        color: white; /* Optional: Text color */
+        margin: 0; /* Remove default margin */
+    }
+
+
+.container1 {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    padding: 160px; /* Increased padding for more height */
+    background: linear-gradient(to bottom, #2f2845, #2c3f5e,#131313); /* More contrasting gradient */
+    color: white; /* Text color */
+    width: 99.5vw; /* Set container to full viewport width */
+    position: relative; /* Ensure proper placement in the layout */
+    left: 50%; /* Adjust left position */
+    right: 50%; /* Adjust right position */
+    margin-left: -50vw; /* Pull margin back to ensure full width */
+    margin-right: -50vw; /* Pull margin back to ensure full width */
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-in-out; /* Transition for fade effect */
+}
+
+    .fade-in.show {
+        opacity: 1; /* Fully visible when the class is added */
+    }
+
+.logo {
+    width: 250px; /* Set a fixed width for the logo */
+    margin-bottom: 20px; /* Space between the logo and the first heading */
+}
+
+h1 {
+    font-size: 60px; /* Increased font size for headings */
+    margin: 15px 0; /* Increased margin for spacing between headings */
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px; /* Increased font size for the paragraph */
+    line-height: 1.5; /* Line height for better readability */
+    margin-top: 25px; /* Increased space above the paragraph */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: white;
+
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+/* Left Section with Gradient */
+.left-section {
+    width: 49.5%;
+    padding: 30px;
+    background: linear-gradient(to right, #622424, #492a5b, #2b2a74); /* More contrasting gradient */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 55.1vh; /* Ensure it occupies full height */
+    border-radius: 15px; /* Adjust this value for desired roundness */
+    overflow: hidden; /* Ensures child elements respect border radius */
+    background-color: #2f2f2f; /* Optional: Background color for visibility */
+}
+
+    .left-section .logo {
+        width: 150px;
+        margin-bottom: 20px;
+        color: #ff0000; /* Change to your desired color (e.g., red) */
+        font-family: 'Your Font Name', sans-serif; /* Use the desired font family */
+    }
+
+    .left-section h1 {
+        font-weight: bold; /* Make the font bold */
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .left-section p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: white;
+        font-family: 'Your Font Name', sans-serif; /* Use the same font family as h1 */
+    }
+
+/* Right Section with Video */
+.right-section {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Background to enhance video visibility */
+}
+
+    .right-section video {
+        width: 95%;
+        height: 95%;
+        object-fit: cover; /* Ensures the video covers the section */
+        pointer-events: none; /* Disables user interaction */
+        border-radius: 10px;
+        autoplay: true;
+        loop: true;
+        muted: true;
+        playsinline: true;
+        transform: scale(1.1); /* Scale the video to zoom in */
+    }
 

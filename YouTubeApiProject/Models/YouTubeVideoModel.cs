@@ -7,5 +7,6 @@
         public string ThumbnailUrl { get; set; }
         public string ChannelName { get; set; }
         public string ChannelProfilePictureUrl { get; set; }
+        public string VideoUrl { get; set; } // Add this property for the video link
     }
 }

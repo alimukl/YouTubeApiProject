@@ -50,7 +50,9 @@ namespace YouTubeApiProject.Services
                         Description = searchResult.Snippet.Description,
                         ThumbnailUrl = searchResult.Snippet.Thumbnails.Medium.Url,
                         ChannelName = channelName, // Channel name from search result
-                        ChannelProfilePictureUrl = channelProfilePictureUrl // Channel profile picture
+                        ChannelProfilePictureUrl = channelProfilePictureUrl,// Channel profile picture
+                        VideoUrl = "https://www.youtube.com/watch?v=" + searchResult.Id.VideoId // Add this line
+
                     });
                 }
             }
