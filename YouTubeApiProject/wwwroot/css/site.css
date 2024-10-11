@@ -548,7 +548,7 @@ body {
 }
 
 /* For mobile devices */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 990px) {
 
     h1 {
         font-size: 30px; /* Increased font size for headings */
@@ -703,8 +703,9 @@ body {
             playsinline: true;
             transform: scale(1.1); /* Scale the video to zoom in */
         }
-
 }
+
+@media (mind-width: )
 
 @media (min-width: 1024px){
 
