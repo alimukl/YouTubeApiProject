@@ -26,18 +26,35 @@
 
     <div class="container-box">
         <div class="box">
+            <video autoplay loop muted playsinline style="width: 100%; height: auto;">
+            <source src="@Url.Content("~/box-1.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>Ad-free so you can immerse yourself in your favourite videos without interruption</p>
         </div>
         <div class="box">
+            <video autoplay loop muted playsinline style="width: 100%; height: auto;">
+            <source src="@Url.Content("~/box-2.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>Download videos to watch later when you’re offline or on the go</p>
         </div>
         <div class="box">
+            <video autoplay loop muted playsinline style="width: 100%; height: auto;">
+            <source src="@Url.Content("~/box-3.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>Background play so you can watch while using other apps or with your screen locked</p>
         </div>
         <div class="box">
+            <video autoplay loop muted playsinline style="width: 100%; height: 40%;">
+            <source src="@Url.Content("~/box-4.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>Stream all the music you want to hear, ad-free on the YouTube Music app</p>
         </div>
     </div>
+
 
     <div class="container-header">
 
@@ -66,6 +83,61 @@
 
     </div>
 
+    <div class="container2">
+        <!-- Left Section with Description -->
+        <div class="left-section-circle">
+            <h1>Unlimited ad-free videos</h1>
+            <p>
+                Immerse yourself in more of your favourite videos without waiting for ads.
+                Find helpful how-to's, try new recipes or work out with your favourite creators – all without any interruptions.
+            </p>
+        </div>
+
+        <!-- Right Section with YouTube Video -->
+        <div class="right-section-circle">
+            <video width="400" height="300" autoplay loop muted playsinline>
+                <source src="@Url.Content("~/circle-1.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="container2">
+        <!-- Right Section with YouTube Video -->
+        <div class="right-section-circle">
+            <video width="400" height="300" autoplay loop muted playsinline>
+                <source src="@Url.Content("~/circle-2.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Left Section with Description -->
+        <div class="left-section-circle">
+            <h1>Enjoy videos offline</h1>
+            <p>
+                Watch any time, anywhere – download videos and watch them whenever, wherever,
+                without the need for mobile data or Wi-Fi.
+            </p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <!-- Left Section with Description -->
+        <div class="left-section-circle">
+            <h1>Unlimited ad-free videos</h1>
+            <p>
+                Immerse yourself in more of your favourite videos without waiting for ads.
+                Find helpful how-to's, try new recipes or work out with your favourite creators – all without any interruptions.
+            </p>
+        </div>
+
+        <!-- Right Section with YouTube Video -->
+        <div class="right-section-circle">
+            <video width="400" height="300" autoplay loop muted playsinline>
+                <source src="@Url.Content("~/circle-3.mp4")" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 
     <div class="container2">
         <!-- Left Section with Description -->
@@ -74,7 +146,8 @@
             <h1>An app made just for music</h1>
             <p>
                 With YouTube Premium, you get uninterrupted access to stream all that you want on the YouTube Music app.
-                Listen to the world's largest music catalogue with over 100 million songs, ad-free – enjoy personalised mixes, playlists to fit every mood, chart-toppers from around the world and more, all without ads.
+                Listen to the world's largest music catalogue with over 100 million songs,
+                ad free – enjoy personalised mixes, playlists to fit every mood, chart-toppers from around the world and more, all without ads.
             </p>
         </div>
 
@@ -87,14 +160,16 @@
         </div>
     </div>
 
-    <h1>Welcome to YouTube API!</h1><br />
-    <p>Discover a world of videos at your fingertips. Our application provides a simple interface for searching and viewing YouTube content.</p>
+    <div class="welcome">
 
-    <hr />
+     <h1>Welcome to YouTube API!</h1><br />
+     <p>Discover a world of videos at your fingertips. Our application provides a simple interface for searching and viewing YouTube content.</p>
 
-    <h3>Function Overview</h3>
+     <hr />
 
-    <div class="card mb-4" style="background-color: #f8f9fa; border: 1px solid #ced4da;">
+     <h3>Function Overview</h3>
+
+        <div class="card mb-4" style="background-color: #e1e1e1; border: 1px solid #ced4da;">
         <div class="card-body">
             <div class="mb-4">
                 <h4>Search Page</h4>
@@ -102,9 +177,9 @@
                 <p style="color:black"><strong>How to Use:</strong> Simply enter your desired search term in the input form and click the <strong>"Search"</strong> button.</p>
             </div>
         </div>
-    </div>
+     </div>
 
-    <div class="card mb-4" style="background-color: #f8f9fa; border: 1px solid #ced4da;">
+        <div class="card mb-4" style="background-color: #e1e1e1; border: 1px solid #ced4da;">
         <div class="card-body">
             <div class="mb-4">
                 <h4>Results Page</h4>
@@ -112,8 +187,10 @@
                 <p style="color:black"><strong>How to Use:</strong> Browse through the list of videos that match your search query. Click on any video to watch it directly on YouTube.</p>
             </div>
         </div>
-    </div>
+     </div>
 
+    
+    
     <h3>Get Started!</h3>
     <p>Ready to dive into the world of videos? Click the button below to start your search!</p>
     <a class="btn btn-danger" style="color: white; font-family: 'Roboto', sans-serif;" asp-controller="YouTube"
@@ -124,6 +201,8 @@
 
     <h3>Need Help?</h3>
     <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+  </div>
+
 </div>
 
 <!-- Include jQuery and custom fade-in script at the bottom -->

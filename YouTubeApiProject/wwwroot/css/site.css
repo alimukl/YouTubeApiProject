@@ -41,7 +41,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #131313 !important;
+    background-color: #0f0f0f !important;
     color: white;
 }
 
@@ -249,20 +249,16 @@ h2 {
     flex-wrap: nowrap; /* Prevent wrapping */
     justify-content: center;
     overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    gap: 100px; /* Increase space between boxes, adjust value as needed */
 }
 
 .box {
-    background-color: #28779e;
     padding: 20px;
     margin: 10px;
     width: 200px; /* Adjust the width if needed */
     text-align: center;
     border-radius: 5px; /* Add this line for rounded edges */
 }
-
-    .box:hover {
-        background-color: cornflowerblue;
-    }
 
     .box h2 {
         font-size: 18px;
@@ -301,7 +297,7 @@ h2 {
 
 .container-header {
     text-align: center; /* Center the text horizontally */
-    padding: 20px; /* Add some padding around the container */
+    min-height: 10vh;
 }
 
     .container-header h1 {
@@ -320,7 +316,7 @@ h2 {
     justify-content: center; /* Center items vertically */
     text-align: center; /* Center text */
     padding: 160px; /* Increased padding for more height */
-    background: linear-gradient(to bottom, #2f2845, #2c3f5e,#131313); /* More contrasting gradient */
+    background: linear-gradient(to bottom, #2f2845, #2c3f5e,#0f0f0f); /* More contrasting gradient */
     color: white; /* Text color */
     width: 99.5vw; /* Set container to full viewport width */
     position: relative; /* Ensure proper placement in the layout */
@@ -374,7 +370,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    min-height: 70vh;
 
 }
 
@@ -433,4 +429,56 @@ body {
         playsinline: true;
         transform: scale(1.1); /* Scale the video to zoom in */
     }
+
+/* Left Section with Gradient */
+.left-section-circle {
+    width: 49.5%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 55.1vh; /* Ensure it occupies full height */
+    border-radius: 15px; /* Adjust this value for desired roundness */
+    overflow: hidden; /* Ensures child elements respect border radius */
+}
+
+    .left-section-circle h1 {
+        font-weight: bold; /* Make the font bold */
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .left-section-circle p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: grey;
+        font-family: 'Your Font Name', sans-serif; /* Use the same font family as h1 */
+    }
+
+/* Right Section with Video */
+.right-section-circle {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Background to enhance video visibility */
+}
+
+    .right-section-circle video {
+        width: 95%;
+        height: 95%;
+        object-fit: cover; /* Ensures the video covers the section */
+        pointer-events: none; /* Disables user interaction */
+        border-radius: 10px;
+        autoplay: true;
+        loop: true;
+        muted: true;
+        playsinline: true;
+        transform: scale(1.1); /* Scale the video to zoom in */
+    }
+
+.welcome {
+    justify-content: space-between;
+    min-height: 70vh;
+}
 
