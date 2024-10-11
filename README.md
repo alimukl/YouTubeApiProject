@@ -44,10 +44,6 @@ To set up the project locally, follow these steps:
 - Use the search bar to find videos by entering keywords.
 - Click on a video to view its details.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - [YouTube Data API](https://developers.google.com/youtube/v3) for providing the necessary tools to interact with YouTube.
