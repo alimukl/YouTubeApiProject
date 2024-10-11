@@ -385,7 +385,7 @@ body {
 /* Left Section with Gradient */
 .left-section {
     width: 49.5%;
-    padding: 30px;
+    padding: 100px;
     background: linear-gradient(to right, #622424, #492a5b, #2b2a74); /* More contrasting gradient */
     display: flex;
     flex-direction: column;
@@ -546,4 +546,183 @@ body {
         height: 4px
     }
 }
-  
+
+/* For mobile devices */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 30px; /* Increased font size for headings */
+        margin: 15px 0; /* Increased margin for spacing between headings */
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 13px; /* Increased font size for the paragraph */
+        line-height: 1.5; /* Line height for better readability */
+        margin-top: 25px; /* Increased space above the paragraph */
+    }
+
+    .container-box {
+        display: flex;
+        flex-direction: row; /* Set to row */
+        flex-wrap: wrap; /* Allow wrapping to the next row */
+        justify-content: center;
+        gap: 5px; /* Space between boxes */
+    }
+
+    .box {
+        padding: 20px;
+        margin: 10px;
+        width: calc(50% - 20px); /* Set box width to 50% of the container, minus margins */
+        text-align: center;
+        border-radius: 5px; /* Rounded edges */
+    }
+
+        .box h2 {
+            font-size: 1px;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 11px;
+            color: white;
+        }
+
+    .container-header {
+        text-align: center; /* Center the text horizontally */
+        min-height: 10vh;
+    }
+
+        .container-header h1 {
+            font-size: 30px; /* Set the font size to make it big */
+            font-weight: bold; /* Make the font bold */
+            padding: 100px;
+            color: white; /* Optional: Text color */
+            margin: 0; /* Remove default margin */
+        }
+
+    /* Left Section with Gradient */
+    .left-section-circle {
+        width: 49.5%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 55.1vh; /* Ensure it occupies full height */
+        border-radius: 15px; /* Adjust this value for desired roundness */
+        overflow: hidden; /* Ensures child elements respect border radius */
+    }
+
+        .left-section-circle h1 {
+            font-weight: bold; /* Make the font bold */
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .left-section-circle p {
+            font-size: 8px;
+            line-height: 1.6;
+            color: grey;
+            font-family: 'Your Font Name', sans-serif; /* Use the same font family as h1 */
+        }
+
+    /* Right Section with Video */
+    .right-section-circle {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black; /* Background to enhance video visibility */
+    }
+
+        .right-section-circle video {
+            width: 95%;
+            height: 95%;
+            object-fit: cover; /* Ensures the video covers the section */
+            pointer-events: none; /* Disables user interaction */
+            border-radius: 10px;
+            autoplay: true;
+            loop: true;
+            muted: true;
+            playsinline: true;
+            transform: scale(1.1); /* Scale the video to zoom in */
+        }
+
+    /* Left Section with Gradient */
+    .left-section {
+        width: 49.5%;
+        padding: 30px;
+        background: linear-gradient(to right, #622424, #492a5b, #2b2a74); /* More contrasting gradient */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 15vh; /* Ensure it occupies full height */
+        border-radius: 15px; /* Adjust this value for desired roundness */
+        overflow: hidden; /* Ensures child elements respect border radius */
+        background-color: #2f2f2f; /* Optional: Background color for visibility */
+    }
+
+        .left-section .logo {
+            width: 80px;
+            margin-bottom: 20px;
+            color: #ff0000; /* Change to your desired color (e.g., red) */
+            font-family: 'Your Font Name', sans-serif; /* Use the desired font family */
+        }
+
+        .left-section h1 {
+            font-weight: bold; /* Make the font bold */
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .left-section p {
+            font-size: 5px;
+            line-height: 1.6;
+            color: white;
+            font-family: 'Your Font Name', sans-serif; /* Use the same font family as h1 */
+        }
+
+    /* Right Section with Video */
+    .right-section {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black; /* Background to enhance video visibility */
+    }
+
+        .right-section video {
+            width: 95%;
+            height: 95%;
+            object-fit: cover; /* Ensures the video covers the section */
+            pointer-events: none; /* Disables user interaction */
+            border-radius: 10px;
+            autoplay: true;
+            loop: true;
+            muted: true;
+            playsinline: true;
+            transform: scale(1.1); /* Scale the video to zoom in */
+        }
+
+}
+
+/* For Small Laptops (screen width: 1024px and below) */
+@media (max-width: 1024px) {
+    .container-box {
+        flex-wrap: wrap; /* Ensures boxes wrap to new rows */
+    }
+}
+
+/* For Large Desktops and Laptops (screen width: 1025px and above) */
+@media (min-width: 1025px) {
+    .container-box {
+        flex-wrap: wrap;
+    }
+}
+
+/* For Extra Large Screens (screen width: 1440px and above) */
+@media (min-width: 1440px) {
+    .container-box {
+        flex-wrap: wrap;
+    }
+}
